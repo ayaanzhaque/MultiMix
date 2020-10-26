@@ -17,7 +17,7 @@ For sparingly-supervised classification, we leverage data augmentation and pseud
 For sparingly-supervised segmentation, we generate saliency maps based on the predicted classes using the gradients of the encoder. While the segmentation images do not necessarily represent pneumonia, the classification task, the generated maps highlight the lungs, creating images at the final segmentation resolution. These saliency maps can be used to guide the segmentation during the decoder phase, yielding improved segmentation while learning from limited labeled data. In our algorithm, the generated saliency maps are concatenated with the input images, downsampled, and added to the feature maps input to the first decoder stage. Moreover, to ensure consistency, we compute the KL divergence between segmentation predictions for labeled and unlabeled examples. This penalizes the model from making predictions that are increasingly different than those of the labeled data, which helps the model fit more appropriately for the unlabeled data.
 
 ## Datasets
-The models were trained and tested on the combinedclassification and segmentation tasks using data from two dif-ferent sources:  pneumonia detection (CheX) [1] and JSRT[2]. Furthermore, we used the Montgomery County chest X-rays (MCU) [3] and a subset of the NIH chest X-ray dataset(NIHX) [4] for cross-domain evaluation.
+The models were trained and tested on the combined classification and segmentation tasks using data from two dif-ferent sources:  pneumonia detection (CheX) [1] and JSRT[2]. Furthermore, we used the Montgomery County chest X-rays (MCU) [3] and a subset of the NIH chest X-ray dataset(NIHX) [4] for cross-domain evaluation.
 
 ![Datasets](https://github.com/ayaanzhaque/MultiMix/blob/main/images/datasets_table.png?raw=true)
 
@@ -30,17 +30,6 @@ A brief summary of our results are shown below. Our algorithm MultiMix is compar
 
 ## Code
 The code has been written in Python using the Pytorch framework. Training requries a GPU. We provide a Jupyter Notebook, which can be run in Google Colab, containing the algorithm in a usable version. Open [`MultiMix.ipynb`](https://github.com/ayaanzhaque/MultiMix/blob/main/MultiMix.ipynb) and run it through. The notebook includes annotations to follow along.
-
-## Citation
-If you use our code or our paper, please consider citing our work: 
-```
-@article{,
-  title={MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images.},
-  author={},
-  journal={},
-  year={}
-}
-```
 
 ## References
 [1] Daniel S Kermany, Michael Goldbaum, Wenjia Cai, Car-olina CS Valentim, Huiying Liang, Sally L Baxter, AlexMcKeown, Ge Yang, Xiaokang Wu, Fangbing Yan, et al.,“Identifying medical diagnoses and treatable diseases byimage-based deep learning,”Cell, vol. 172, no. 5, pp.1122–1131, 2018.
