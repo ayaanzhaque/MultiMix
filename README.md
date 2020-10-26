@@ -29,7 +29,7 @@ A brief summary of our results are shown below. Our algorithm MultiMix is compar
 ![Boundaries](https://github.com/ayaanzhaque/MultiMix/blob/main/images/boundary_preds.png?raw=true)
 
 ## Code
-The code has been written in Python using the Pytorch framework. Training requries a GPU. We provide a Jupyter Notebook, which can be run in Google Colab, containing the algorithm in a usable version. Open [`MultiMix.ipynb`](https://github.com/ayaanzhaque/MultiMix/blob/main/MultiMix.ipynb) and run it through. The notebook includes annotations to follow along.
+The code has been written in Python using the Pytorch framework. Training requries a GPU. We provide a Jupyter Notebook, which can be run in Google Colab, containing the algorithm in a usable version. Open [`MultiMix.ipynb`](https://github.com/ayaanzhaque/MultiMix/blob/main/MultiMix.ipynb) and run it through. The notebook includes annotations to follow along. Open the sample_data folder and use the classification and segmentation sample images for making predictions. Load [`multimix_trained_model.pth`](https://github.com/ayaanzhaque/MultiMix/blob/main/sample_data/multimix_trained_model.pth) and make predictions on the provided images. Uncomment the training cell to train the model.
 
 ## References
 [1] Daniel S Kermany, Michael Goldbaum, Wenjia Cai, Car-olina CS Valentim, Huiying Liang, Sally L Baxter, AlexMcKeown, Ge Yang, Xiaokang Wu, Fangbing Yan, et al.,“Identifying medical diagnoses and treatable diseases byimage-based deep learning,”Cell, vol. 172, no. 5, pp.1122–1131, 2018.
