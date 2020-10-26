@@ -29,7 +29,7 @@ A brief summary of our results are shown below. Our algorithm MultiMix is compar
 ![Boundaries](https://github.com/ayaanzhaque/MultiMix/blob/main/images/boundary_preds.png?raw=true)
 
 ## Code
-The code has been written in Python using the Pytorch framework. Training requries a GPU. We provide a Jupyter Notebook, which can be run in Google Colab, containing the algorithm in a usable version. Open [`MultiMix.ipynb`](https://github.com/ayaanzhaque/MultiMix) and run it through. The notebook includes annotations to follow along.
+The code has been written in Python using the Pytorch framework. Training requries a GPU. We provide a Jupyter Notebook, which can be run in Google Colab, containing the algorithm in a usable version. Open [`MultiMix.ipynb`](https://github.com/ayaanzhaque/MultiMix/blob/main/MultiMix.ipynb) and run it through. The notebook includes annotations to follow along.
 
 ## Citation
 If you use our code or our paper, please consider citing our work: 
