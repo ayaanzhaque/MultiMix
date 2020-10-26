@@ -1,5 +1,9 @@
 # MultiMix
-This repository contains the implementation of the paper MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images, by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. Our proposed models performs joint semi-supervised classification and segmentation by employing a confidence-based augmentation strategy for semi-supervised classification along with a novel saliency bridge module that guides segmentation and provides explainability for the joint tasks. 
+This repository contains the implementation of the paper MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images, by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. 
+
+**The supplemental material can be found here:** [supplemental_document.pdf](https://github.com/ayaanzhaque/MultiMix/blob/main/supplemental_document.pdf)
+
+Our proposed models performs joint semi-supervised classification and segmentation by employing a confidence-based augmentation strategy for semi-supervised classification along with a novel saliency bridge module that guides segmentation and provides explainability for the joint tasks. 
 
 ## Abstract
 Semi-supervised learning via learning from limited quantities of labeled data has been investigated as an alternative to supervised counterparts. Maximizing knowledge gains from copious unlabeled data benefit semi-supervised learning settings. Moreover, learning multiple tasks within the same model further improves model generalizability.  We propose a novel multitask learning model, namely MultiMix, which jointly learns disease classification and anatomical segmentation in a sparingly supervised manner, while preserving explainability through bridge saliency between the two tasks. Our extensive experimentation with varied quantities of labeled data in the training sets justify the effectiveness of our multitasking model for the classification of pneumonia and segmentation of lungs from chest X-ray images. Moreover, both in-domain and cross-domain evaluations across the tasks further showcase the potential of our model to adapt to challenging generalization scenarios.
