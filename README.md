@@ -1,5 +1,5 @@
 # MultiMix
-This repository contains the implementation of the paper MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images, by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. 
+This repository contains the implementation of the paper [MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images](https://arxiv.org/abs/2010.14731), by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. 
 
 **The supplementary material can be found here:** [supplemental_document.pdf](https://github.com/ayaanzhaque/MultiMix/blob/main/supplemental_document.pdf)
 
@@ -31,11 +31,27 @@ A brief summary of our results are shown below. Our algorithm MultiMix is compar
 ## Code
 The code has been written in Python using the Pytorch framework. Training requries a GPU. We provide a Jupyter Notebook, which can be run in Google Colab, containing the algorithm in a usable version. Open [`MultiMix.ipynb`](https://github.com/ayaanzhaque/MultiMix/blob/main/MultiMix.ipynb) and run it through. The notebook includes annotations to follow along. Open the sample_data folder and use the classification and segmentation sample images for making predictions. Load [`multimix_trained_model.pth`](https://github.com/ayaanzhaque/MultiMix/blob/main/sample_data/multimix_trained_model.pth) and make predictions on the provided images. Uncomment the training cell to train the model.
 
+## Citation
+If you find this repo or the paper useful, please cite: 
+
+Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos,  “Multimix:  Sparingly Supervised, Extreme Multitask Learning From Medical Images,” 2020.
+
+```
+@misc{haque2020multimix,
+      title={MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images}, 
+      author={Ayaan Haque and Abdullah-Al-Zubaer Imran and Adam Wang and Demetri Terzopoulos},
+      year={2020},
+      eprint={2010.14731},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
 ## References
-[1] Daniel S Kermany, Michael Goldbaum, Wenjia Cai, Car-olina CS Valentim, Huiying Liang, Sally L Baxter, AlexMcKeown, Ge Yang, Xiaokang Wu, Fangbing Yan, et al.,“Identifying medical diagnoses and treatable diseases byimage-based deep learning,”Cell, vol. 172, no. 5, pp.1122–1131, 2018.
+[1] Daniel S Kermany, Michael Goldbaum, Wenjia Cai, Carolina CS Valentim, Huiying Liang, Sally L Baxter, AlexMcKeown, Ge Yang, Xiaokang Wu, Fangbing Yan, et al.,“Identifying medical diagnoses and treatable diseases byimage-based deep learning,”Cell, vol. 172, no. 5, pp.1122–1131, 2018.
 
-[2] Junji Shiraishi, Shigehiko Katsuragawa, et al.,  “Devel-opment of a digital image database for chest radiographswith and without a lung nodule,”J of Roent, 2000.
+[2] Junji Shiraishi, Shigehiko Katsuragawa, et al., “Development of a digital image database for chest radiographs with and without a lung nodule,” J of Roent, 2000.
 
-[3] Stefan  Jaeger,  Sema  Candemir,  et  al.,    “Two  publicchest X-ray datasets for computer-aided screening ofpulmonary  diseases,”Quant Imag in Med and Surg,2014.
+[3] Stefan  Jaeger,  Sema  Candemir,  et  al., “Two public chest X-ray datasets for computer-aided screening ofpulmonary  diseases,” Quant Imag in Med and Surg,2014.
 
-[4] Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, Mo-hammadhadi Bagheri, and Ronald M Summers, “Chestx-ray8:  Hospital-scale  chest  x-ray  database  and  bench-marks on weakly-supervised classification and localiza-tion of common thorax diseases,” inProceedings of theIEEE conference on computer vision and pattern recog-nition, 2017, pp. 2097–2106.
+[4] Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, Mohammadhadi Bagheri, and Ronald M Summers, “Chestx-ray8:  Hospital-scale  chest  x-ray  database  and  bench-marks on weakly-supervised classification and localiza-tion of common thorax diseases,” in Proceedings of the IEEE conference on computer vision and pattern recognition, 2017, pp. 2097–2106.
