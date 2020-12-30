@@ -1,8 +1,6 @@
 # MultiMix
 This repository contains the implementation of the paper [MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images](https://arxiv.org/abs/2010.14731), by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. 
 
-**The supplementary material can be found here:** [supplemental_document.pdf](https://github.com/ayaanzhaque/MultiMix/blob/main/supplemental_document.pdf)
-
 Our proposed model performs joint semi-supervised classification and segmentation by employing a confidence-based augmentation strategy for semi-supervised classification along with a novel saliency bridge module that guides segmentation and provides explainability for the joint tasks. 
 
 ## Abstract
