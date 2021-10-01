@@ -18,11 +18,6 @@ For sparingly-supervised classification, we leverage data augmentation and pseud
 
 For sparingly-supervised segmentation, we generate saliency maps based on the predicted classes using the gradients of the encoder. While the segmentation images do not necessarily represent pneumonia, the classification task, the generated maps highlight the lungs, creating images at the final segmentation resolution. These saliency maps can be used to guide the segmentation during the decoder phase, yielding improved segmentation while learning from limited labeled data. In our algorithm, the generated saliency maps are concatenated with the input images, downsampled, and added to the feature maps input to the first decoder stage. Moreover, to ensure consistency, we compute the KL divergence between segmentation predictions for labeled and unlabeled examples. This penalizes the model from making predictions that are increasingly different than those of the labeled data, which helps the model fit more appropriately for the unlabeled data.
 
-## Datasets
-The models were trained and tested on the combined classification and segmentation tasks using data from two dif-ferent sources:  pneumonia detection (CheX) [1] and JSRT[2]. Furthermore, we used the Montgomery County chest X-rays (MCU) [3] and a subset of the NIH chest X-ray dataset(NIHX) [4] for cross-domain evaluation.
-
-![Datasets](https://github.com/ayaanzhaque/MultiMix/blob/main/images/datasets_table.png?raw=true)
-
 ## Results
 A brief summary of our results are shown below. Our algorithm MultiMix is compared to various baselines. In the table, the best fully-supervised scores are underlined and the best semi-supervised scores are bolded.
 
@@ -54,13 +49,3 @@ If you find this repo or the paper useful, please cite:
 ```
 To be released
 ```
-
-
-## References
-[1] Daniel S Kermany, Michael Goldbaum, Wenjia Cai, Carolina CS Valentim, Huiying Liang, Sally L Baxter, AlexMcKeown, Ge Yang, Xiaokang Wu, Fangbing Yan, et al.,“Identifying medical diagnoses and treatable diseases byimage-based deep learning,”Cell, vol. 172, no. 5, pp.1122–1131, 2018.
-
-[2] Junji Shiraishi, Shigehiko Katsuragawa, et al., “Development of a digital image database for chest radiographs with and without a lung nodule,” J of Roent, 2000.
-
-[3] Stefan  Jaeger,  Sema  Candemir,  et  al., “Two public chest X-ray datasets for computer-aided screening ofpulmonary  diseases,” Quant Imag in Med and Surg,2014.
-
-[4] Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, Mohammadhadi Bagheri, and Ronald M Summers, “Chestx-ray8:  Hospital-scale  chest  x-ray  database  and  bench-marks on weakly-supervised classification and localiza-tion of common thorax diseases,” in Proceedings of the IEEE conference on computer vision and pattern recognition, 2017, pp. 2097–2106.
