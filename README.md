@@ -1,5 +1,9 @@
 # MultiMix
-This repository contains the implementation of the paper [MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images](https://arxiv.org/abs/2010.14731), by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. 
+This repository contains the implementation of MultiMix. Our publications for this project are listed below:
+
+["MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images,"](https://arxiv.org/abs/2010.14731) by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. In [ISBI](https://biomedicalimaging.org/2021/), 2021.
+
+["Generalized Multi-Task Learning from Substantially Unlabeled Multi-Source Medical Image Data,"]() by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. In [MELBA](https://www.melba-journal.org/), 2021.
 
 Our proposed model performs joint semi-supervised classification and segmentation by employing a confidence-based augmentation strategy for semi-supervised classification along with a novel saliency bridge module that guides segmentation and provides explainability for the joint tasks. 
 
@@ -32,18 +36,25 @@ The code has been written in Python using the Pytorch framework. Training requri
 ## Citation
 If you find this repo or the paper useful, please cite: 
 
-Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos,  “Multimix:  Sparingly Supervised, Extreme Multitask Learning From Medical Images,” 2020.
-
+**ISBI Paper**
 ```
-@misc{haque2020multimix,
-      title={MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images}, 
-      author={Ayaan Haque and Abdullah-Al-Zubaer Imran and Adam Wang and Demetri Terzopoulos},
-      year={2020},
-      eprint={2010.14731},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{haque2020multimix,
+      author={Haque, Ayaan and Imran, Abdullah-Al-Zubaer and Wang, Adam and Terzopoulos, Demetri},
+      booktitle={2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI)}, 
+      title={Multimix: Sparingly-Supervised, Extreme Multitask Learning from Medical Images}, 
+      year={2021},
+      volume={},
+      number={},
+      pages={693-696},
+      doi={10.1109/ISBI48211.2021.9434167}
 }
 ```
+
+**MELBA Paper**
+```
+To be released
+```
+
 
 ## References
 [1] Daniel S Kermany, Michael Goldbaum, Wenjia Cai, Carolina CS Valentim, Huiying Liang, Sally L Baxter, AlexMcKeown, Ge Yang, Xiaokang Wu, Fangbing Yan, et al.,“Identifying medical diagnoses and treatable diseases byimage-based deep learning,”Cell, vol. 172, no. 5, pp.1122–1131, 2018.
