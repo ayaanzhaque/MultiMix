@@ -12,7 +12,7 @@ Semi-supervised learning via learning from limited quantities of labeled data ha
 
 ## Model
 
-![Figure](https://github.com/ayaanzhaque/MultiMix/blob/main/images/multimix_diagram.png?raw=true)
+![Figure](https://github.com/ayaanzhaque/MultiMix/blob/main/images/multimix_journal_diagram.jpg?raw=true)
 
 For sparingly-supervised classification, we leverage data augmentation and pseudo-labeling. We take an unlabeled image and perform two separate augmentations. A single unlabeled image is first weakly augmented, and from that weakly augmented version of the image, a pseudo-label is assumed based on the prediction from the current state of the model. Secondly, the same unlabeled image is then augmented strongly, and a loss is calculated with the pseudo-label from the weakly augmented image and the strongly augmented image itself. Note that this image-label pair is retained only if the confidence with which the model generates the pseudo-label is above a tuned threshold, which prevents the model from learning from incorrect and poor labels.
 
