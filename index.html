@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MultiMix</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MultiMix</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Ayaan Haque</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a>Abdullah-Al-Zubaer Imran</a><sup>2,3</sup>,</span>
+            <span class="author-block">
+              <a>Adam Wang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a>Demetri Terzopoulos</a><sup>3,4</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Saratoga High School</span>,
+            <span class="author-block"><sup>2</sup>Stanford University</span>,
+            <span class="author-block"><sup>3</sup>University of California, Los Angeles</span>,
+            <span class="author-block"><sup>4</sup>VoxelCloud Inc.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/abstract/document/9434167/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Conference Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2010.14731"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-book"></i>
+                  </span>
+                  <span>Journal Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2010.14731"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+			  <span class="link-block">
+                <a href="https://towardsdatascience.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-newspaper"></i>
+                  </span>
+                  <span>Blog</span>
+                </a>
+              </span>
+			  <span class="link-block">
+                <a href="static/ISBI2021_Poster.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+			  <span class="link-block">
+                <a href="static/presentation.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+					<i class="fas fa-file-powerpoint"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ayaanzhaque/MultiMix"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class='section'>
+	<div class='container'>
+	  <div class="columns is-centered has-text-centered">
+		<div class="column is-two-thirds">
+		  <div class="content has-text-justified">
+	  <img src="static/images/multimix_diagram.jpg" style='width:100%;'>
+	</div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our proposed model performs joint semi-supervised classification and segmentation by employing a confidence-based augmentation strategy for semi-supervised classification along with a novel saliency bridge module that guides segmentation and provides explainability for the joint tasks.
+          </p>
+          <p>
+            Our paper "MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images" was accepted to <a href="https://biomedicalimaging.org/2021/">IEEE ISBI 2021</a> as a full paper. The paper was presented in April and is availabe in the
+            conference proceedings. The extension of our ISBI paper, "Generalized Multi-Task Learning from Substantially Unlabeled Multi-Source Medical Image Data" was accepted to the <a href = "https://www.melba-journal.org/">MELBA Journal</a>. <a href = "https://drive.google.com/drive/folders/1fuYwbCuvcLdnMXj3Uv4AJg_-wPF5Y3cm?usp=sharing">Here</a> are some photos of us presenting as ISBI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Abstract. -->
+
+  <!-- Paper video. -->
+  <!-- <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">Video</h2>
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div> -->
+  <!--/ Paper video. -->
+</section>
+
+<section class='section'>
+	<div class='container'>
+	  <div class="columns is-centered">
+		<div class="column is-two-thirds">
+      <h2 class="title is-2 has-text-centered">Methods</h2>
+		  <div class="content has-text-justified">
+	    <img src="static/images/saliency_module.jpg" style='width:100%;'>
+  	</div>
+
+    <p>
+      <li>Our model performs joint classification and segmentation using semi-supervised and multi-task learning.</li>
+      <li>For semi-supervised classification we use pseudo-label and consistency augmentation. 
+        An unlabeled image is augmented twice, weakly and strongly, and pseudo-labels are produced 
+        for the weakly augmented versions with confidence.</li>
+        <li>For segmentation, we propose the novel saliency bridge, which uses saliency maps from the encoder 
+          to guide segmentation in the decoder.</li>
+          <li>Our model architecture uses the U-Net and incorporates a classification branch 
+            after the encoder. In the bottleneck, we generate saliency maps and concatenate them in the decoder.</li>
+    </p>
+
+  </div>
+  </div>
+  </div>
+  </section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-2">Visualizations</h2>
+          <p>
+            Segmentation Visualizations prove the effectiveness of our model in multiple domains over baselines.
+          </p>
+          <img src="static/images/chest.png" style='width:100%;'>
+          <img src="static/images/dice.png" style='width:100%;'>
+          <img src="static/images/pred.png" style='width:100%;'>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-2">Graphs and Metrics</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              For classification and segmentation, metrics and graphs demonstrate the superiority of MultiMix against baselines.
+            </p>
+            <img src="static/images/consistency.png" style='width:100%;'>
+            <img src="static/images/roc.png" style='width:100%;'>
+            <img src="static/images/table.png" style='width:100%;'>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+  </div>
+</section>
+
+
+</section>
+
+<!-- Animation. -->
+<!-- <section class="section">
+  <div class="container-fluid">
+<div class="columns is-centered has-text-centered">
+  <div class="column is-two-thirds">
+    <h2 class="title is-2">Paper</h2>
+    <div class="content has-text-justified">
+
+    <embed src="static/paper.pdf" width="100%" height='700px'/>
+  
+</div>
+</div>
+</div>
+</div>
+</section> -->
+
+<!-- Animation. -->
+<section class="section">
+  <div class="container-fluid">
+<div class="columns is-centered has-text-centered">
+  <div class="column is-two-thirds">
+    <h2 class="title is-2">ISBI Poster</h2>
+    <div class="content has-text-justified">
+
+    <embed src="static/ISBI2021_Poster.pdf" width="100%" height='700px'/>
+  
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">Journal BibTeX</h2>
+    <pre><code>To be announced
+</code></pre>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">Conference BibTeX</h2>
+    <pre><code>@inproceedings{haque2021multimix,
+      title={Multimix: Sparingly-Supervised, Extreme Multitask Learning from Medical Images},
+      author={Haque, Ayaan and Wang, Adam and Terzopoulos, Demetri and others},
+      booktitle={2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI)},
+      pages={693--696},
+      year={2021},
+      organization={IEEE}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="static/paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/ayaanzhaque/MultiMix" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template was borrowed from <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
