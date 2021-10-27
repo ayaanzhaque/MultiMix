@@ -3,7 +3,7 @@ This repository contains the implementation of MultiMix. Our publications for th
 
 ["MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images,"](https://arxiv.org/abs/2010.14731) by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. In [ISBI](https://biomedicalimaging.org/2021/), 2021.
 
-["Generalized Multi-Task Learning from Substantially Unlabeled Multi-Source Medical Image Data,"]() by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. In [MELBA](https://www.melba-journal.org/), 2021.
+["Generalized Multi-Task Learning from Substantially Unlabeled Multi-Source Medical Image Data,"](https://arxiv.org/abs/2110.13185) by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. In [MELBA](https://www.melba-journal.org/), 2021.
 
 Our proposed model performs joint semi-supervised classification and segmentation by employing a confidence-based augmentation strategy for semi-supervised classification along with a novel saliency bridge module that guides segmentation and provides explainability for the joint tasks. 
 
