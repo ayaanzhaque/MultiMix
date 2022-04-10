@@ -1,7 +1,7 @@
 # [MultiMix](https://ayaanzhaque.github.io/MultiMix/)
 This repository contains the implementation of MultiMix. Our publications for this project are listed below:
 
-["MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images,"](https://arxiv.org/abs/2010.14731) by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. In [ISBI](https://biomedicalimaging.org/2021/), 2021.
+["MultiMix: Sparingly Supervised, Extreme Multitask Learning From Medical Images,"](https://arxiv.org/abs/2010.14731) by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. In [IEEE ISBI](https://biomedicalimaging.org/2021/), 2021.
 
 ["Generalized Multi-Task Learning from Substantially Unlabeled Multi-Source Medical Image Data,"](https://arxiv.org/abs/2110.13185) by Ayaan Haque, Abdullah-Al-Zubaer Imran, Adam Wang, and Demetri Terzopoulos. In [MELBA](https://www.melba-journal.org/), 2021.
 
