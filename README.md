@@ -47,5 +47,12 @@ If you find this repo or the paper useful, please cite:
 
 **MELBA Paper**
 ```
-To be released
+@article{melba:2021:011:haque,
+    title = "Generalized Multi-Task Learning from Substantially Unlabeled Multi-Source Medical Image Data",
+    authors = "Haque, Ayaan and Imran, Abdullah-Al-Zubaer and Wang, Adam and Terzopoulos, Demetri",
+    journal = "Machine Learning for Biomedical Imaging",
+    volume = "1",
+    issue = "October 2021 issue",
+    year = "2021"
+}
 ```
